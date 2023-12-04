@@ -1,0 +1,52 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+  }
+  .container {
+    padding:200px;
+  }
+  .card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000000;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #FFFF00;
+  }
+  
+  .btn-primary {
+    font-weight: bold;
+    background-color: rgb(0, 140, 255);
+    border-color: rgb(0, 140, 255);
+    color: white;
+    border-radius: 5px;
+    margin-left:168px;
+  }
+  
+  .btn-primary:hover {
+    background-color: rgb(102, 183, 249);
+    border-color: rgb(102, 183, 249);
+  }
+  
+  a {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color:rgb(0, 140, 255);
+  }
+  

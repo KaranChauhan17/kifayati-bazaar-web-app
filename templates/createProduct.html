@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="static/css/admin.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Admin Dashboard</h1>
+        <a action="/createProduct" href="createProduct" class="btn2 btn btn-primary">Create Product</a>
+        <a action="/presentOrders" href="presentOrders" class="btn2 btn btn-primary">Present Orders</a>
+        <a action="/pastPurchases" href="pastPurchases" class="btn2 btn btn-primary">Past Purchases</a>
+        <a action="/" href="index" class="btn btn-primary">Logout</a>
+    </header>
+
+    <main class="main" action="/admin" method='post'>
+        <div class="container">
+
+            <h2>Add New Product</h2>
+            <form action="/createProduct" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Product Id</label>
+                    <input type="text" name="product_id" class="form-control" id="product_id" aria-describedby="usernameHelp" placeholder="Enter Your Roll Number">
+                  </div>
+                <div class="form-group">
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" id="product-name" name="product_name" placeholder="Enter product name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="seller-name">Seller Name:</label>
+                    <input type="text" id="seller-name" name="seller_name" placeholder="Enter Seller name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-price">Product Price:</label>
+                    <input type="number" id="product-price" name="price" placeholder="Enter product price" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-description">Product Description:</label>
+                    <textarea id="product-description" name="description" rows="5" placeholder="Enter product description" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-image">Product Image:</label>
+                    <input type="file" id="product-image" name="image" required>
+                </div>
+
+                <button action="/createProduct" type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Kifayati Bazaar</p>
+    </footer>
+</body>
+</html>

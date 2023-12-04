@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="static/css/admin.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Admin Dashboard</h1>
+        <a action="/createProduct" href="createProduct" class="btn2 btn btn-primary">Create Product</a>
+        <a action="/presentOrders" href="presentOrders" class="btn2 btn btn-primary">Present Orders</a>
+        <a action="/pastPurchases" href="pastPurchases" class="btn2 btn btn-primary">Past Purchases</a>
+        <a action="/" href="index" class="btn btn-primary">Logout</a>
+    </header>
+
+    <main class="main" action="/admin" method='post'>
+        <div class="container">
+
+            <h2>Present Orders</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Seller Name</th>
+                        <th>Customer Contact</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                    <div class="box-container">
+                    <div class="box" >
+                        <span class="product_name"> <td>{{ order['_id'] }}</td></span>
+                        <span class="username"> <td>{{ order['username'] }}</td> </span>
+                        <span class="seller_name"> <td>{{ order['seller_name'] }}</td> </span>
+                        <span class="phone_number"> <td>{{ order['phone_number'] }}</td> </span>
+                        <span class="price"> <td>&#8377 {{ order['price'] }}</td> </span>
+                        <form action="/goToCheckout">
+                            <span class="price"> <td><button  type="submit" class="btn btn-primary">Share Contacts</button></td> </span>
+                        </form>
+                    </div>
+                    </div>
+                    </tr>
+                    {% endfor %}   
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Kifayati Bazaar</p>
+    </footer>
+</body>
+</html>

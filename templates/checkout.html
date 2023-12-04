@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Kifayati Bazaar</title>
+  <link rel="stylesheet" href="static/css/checkout.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Kifayati Bazaar</h1>
+    <a action="/logout" href="/" class="btn btn-primary">Logout</a>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h2>Checkout: </h2>
+
+      <section id="buyer-details">
+        <h3>Buyer Details</h3>
+
+        <form action="/goToCheckout" method="post">
+          <div class="mb-3">
+            <label for="product_id" class="form-label">Product Id</label>
+            <input type="text" name="product_id" class="form-control" id="product_id" aria-describedby="usernameHelp" placeholder="Enter product id">
+          </div>
+          <div class="form-group">
+            <label for="name">Your Username:</label>
+            <input type="text" class="form-control" id="name" name="username" placeholder="Enter your roll number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" class="form-control" id="name" name="full_name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" class="form-control" id="phone" name="phone_number" placeholder="Enter your phone number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Hostel Name and Room Number:</label>
+            <textarea class="form-control" id="address" name="room_number" rows="3" placeholder="Enter your hostel name and room number" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Place Order</button>
+        </form>
+      </section>
+      
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2023 Kifayati Bazaar</p>
+  </footer>
+</body>
+</html>
